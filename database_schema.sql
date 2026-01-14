@@ -86,3 +86,7 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
     FOREIGN KEY (food_id) REFERENCES food_items(id) ON DELETE CASCADE
 );
+
+--Add sample admin user
+INSERT INTO users (username, email, password, role) VALUES 
+('admin', 'admin@romartprime.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
