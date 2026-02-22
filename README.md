@@ -59,12 +59,6 @@ Before you begin, ensure you have the following installed:
   - MySQL 5.7 or higher
   - Apache Web Server
 - **Web Browser** (Chrome, Firefox, Safari, Edge)
-- **Text Editor** (VS Code, Sublime Text, etc.) - Optional for modifications
-
-### System Requirements
-- **OS:** Windows, macOS, or Linux
-- **RAM:** 2GB minimum (4GB recommended)
-- **Disk Space:** 500MB minimum
 - **Internet Connection:** Required for CDN resources (Bootstrap, Font Awesome)
 
 ##  Installation
@@ -81,21 +75,6 @@ Or download the ZIP file and extract it.
 ### Step 2: Move to XAMPP Directory
 
 Move the project folder to your XAMPP `htdocs` directory:
-
-**Windows:**
-```
-C:\xampp\htdocs\Romart\
-```
-
-**Mac:**
-```
-/Applications/XAMPP/htdocs/Romart/
-```
-
-**Linux:**
-```
-/opt/lampp/htdocs/Romart/
-```
 
 ### Step 3: Start XAMPP
 
@@ -144,21 +123,6 @@ Romart/
 └── uploads/
     └── food_images/
 ```
-
-**Windows Command:**
-```bash
-cd C:\xampp\htdocs\Romart
-mkdir uploads
-mkdir uploads\food_images
-```
-
-**Mac/Linux Command:**
-```bash
-cd /path/to/htdocs/Romart
-mkdir -p uploads/food_images
-chmod 777 uploads/food_images
-```
-
 ### Step 8: Access the Application
 
 Open your web browser and navigate to:
@@ -268,48 +232,6 @@ Currently, email notifications are not implemented. To add email functionality:
    - Filter orders by status
    - Search orders by customer or order number
 
-##  Project Structure
-
-```
-Romart/
-├── admin/                          # Admin panel
-│   ├── admin.php                   # Dashboard
-│   ├── admin_header.php            # Admin header component
-│   ├── admin_footer.php            # Admin footer component
-│   ├── manage_orders.php           # Order management
-│   ├── manage_food.php             # Food items management
-│   ├── manage_categories.php       # Categories management
-│   └── get_order_details.php       # Order details API
-├── auth/                           # Authentication
-│   ├── login.php                   # User login
-│   ├── register.php                # User registration
-│   └── logout.php                  # Logout handler
-├── user/                           # User pages
-│   ├── cart.php                    # Shopping cart
-│   ├── checkout.php                # Checkout page
-│   ├── orders.php                  # Order history
-│   ├── profile.php                 # User profile
-│   └── order_confirmation.php      # Order success page
-├── actions/                        # Backend actions
-│   ├── add_to_cart.php             # Add items to cart
-│   └── place_order.php             # Process checkout
-├── include/                        # Shared components
-│   ├── db_connect.php              # Database connection
-│   ├── header.php                  # Site header
-│   └── footer.php                  # Site footer
-├── uploads/                        # Uploaded files
-│   └── food_images/                # Food item images
-├── assets/                         # Static assets (optional)
-│   ├── css/                        # Custom CSS
-│   ├── js/                         # Custom JavaScript
-│   └── images/                     # Static images
-├── index.php                       # Homepage
-├── menu.php                        # Full menu page
-├── get_item_details.php            # Item details API
-├── database_schema.sql             # Database structure
-└── README.md                       # This file
-```
-
 ##  Technologies Used
 
 ### Backend
@@ -333,153 +255,13 @@ Romart/
 
 ##  Security Features
 
-- ✅ **Password Hashing** - Bcrypt encryption
-- ✅ **SQL Injection Prevention** - PDO prepared statements
-- ✅ **XSS Protection** - HTML entity encoding
-- ✅ **Session Management** - Secure session handling
-- ✅ **Role-Based Access Control** - Admin vs User roles
-- ✅ **Input Validation** - Server-side validation
-- ✅ **File Upload Validation** - Type and size restrictions
-
-##  Testing
-
-### Manual Testing Checklist
-
-**User Features:**
-- [ ] User registration
-- [ ] User login
-- [ ] Add items to cart
-- [ ] Update cart quantities
-- [ ] Remove items from cart
-- [ ] Checkout process
-- [ ] Order placement
-- [ ] View order history
-- [ ] Update profile
-- [ ] Change password
-
-**Admin Features:**
-- [ ] Admin login
-- [ ] View dashboard statistics
-- [ ] Add food items
-- [ ] Edit food items
-- [ ] Delete food items
-- [ ] Upload images
-- [ ] Add categories
-- [ ] Update order status
-- [ ] Search orders
-- [ ] Filter orders
-
-##  Troubleshooting
-
-### Common Issues
-
-**1. Database Connection Error**
-```
-Solution: Check database credentials in include/db_connect.php
-Verify MySQL is running in XAMPP
-```
-
-**2. Images Not Uploading**
-```
-Solution: Create uploads/food_images/ folder
-Set folder permissions to 777 (Mac/Linux)
-Check PHP upload_max_filesize in php.ini
-```
-
-**3. Session Errors**
-```
-Solution: Ensure session_start() is called before any output
-Check if session folder has write permissions
-```
-
-**4. Page Not Found (404)**
-```
-Solution: Verify Apache is running
-Check file paths are correct
-Ensure .htaccess allows URL rewriting
-```
-
-**5. Blank Page or White Screen**
-```
-Solution: Enable error reporting in PHP
-Check Apache error logs
-Review PHP syntax errors
-```
-
-##  Deployment to Production
-
-### Steps for Live Server Deployment
-
-1. **Choose a Web Host**
-   - Recommended: SiteGround, Bluehost, DigitalOcean
-   - Ensure PHP 7.4+ and MySQL support
-
-2. **Upload Files**
-   - Use FTP/SFTP (FileZilla recommended)
-   - Upload all files to public_html or www directory
-
-3. **Create Database**
-   - Create MySQL database via cPanel
-   - Import database_schema.sql
-
-4. **Update Configuration**
-   - Update db_connect.php with live database credentials
-   - Change base URLs if needed
-
-5. **Set Permissions**
-   - uploads/ folder: 755 or 777
-   - All PHP files: 644
-
-6. **Security**
-   - Change admin password
-   - Enable HTTPS (SSL certificate)
-   - Update password in database (hashed)
-   - Disable error display in production
-
-7. **Test Everything**
-   - Test all user flows
-   - Test admin functions
-   - Check mobile responsiveness
-
-##  Mobile Access
-
-To access from mobile devices on the same network:
-
-1. Find your computer's IP address:
-   ```bash
-   # Windows
-   ipconfig
-   
-   # Mac/Linux
-   ifconfig
-   ```
-
-2. Configure Apache to accept external connections:
-   - Edit `httpd.conf`
-   - Change `Listen 80` to `Listen 0.0.0.0:80`
-   - Change `Require local` to `Require all granted`
-   - Restart Apache
-
-3. Access from mobile:
-   ```
-   http://YOUR_IP_ADDRESS/Romart/
-   ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Contribution Guidelines
-- Follow existing code style
-- Comment your code
-- Test thoroughly before submitting
-- Update documentation as needed
+-  **Password Hashing** - Bcrypt encryption
+-  **SQL Injection Prevention** - PDO prepared statements
+-  **XSS Protection** - HTML entity encoding
+-  **Session Management** - Secure session handling
+-  **Role-Based Access Control** - Admin vs User roles
+-  **Input Validation** - Server-side validation
+-  **File Upload Validation** - Type and size restrictions
 
 ##  Future Enhancements
 
