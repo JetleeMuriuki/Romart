@@ -11,9 +11,7 @@ A complete web-based food ordering and management system built with PHP, MySQL, 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Key Features
