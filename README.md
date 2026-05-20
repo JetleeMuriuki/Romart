@@ -46,7 +46,13 @@ A complete web-based food ordering and management system built with PHP, MySQL, 
 -  **Session Management** - Secure user sessions
 
 ##  Demo Screenshots
-I will add later i am still adding photos(lol)
+<img width="1903" height="977" alt="Screenshot 2026-05-15 132745" src="https://github.com/user-attachments/assets/4250f38e-a9f7-40b0-bc08-495c3bca94e8" />
+<img width="1904" height="974" alt="Screenshot 2026-05-15 132710" src="https://github.com/user-attachments/assets/d1f944b2-2303-4465-9f7d-2d84fadf2819" />
+<img width="1916" height="974" alt="Screenshot 2026-05-15 132824" src="https://github.com/user-attachments/assets/50a2740e-862c-4ea1-828b-e604baf9f137" />
+<img width="1906" height="978" alt="Screenshot 2026-05-15 132936" src="https://github.com/user-attachments/assets/1684e14a-97fd-4eb9-96ba-99ebd0ca5815" />
+<img width="1900" height="960" alt="Screenshot 2026-05-15 133112" src="https://github.com/user-attachments/assets/cf20618c-01d3-43a0-ab32-e4f48975eef3" />
+<img width="1893" height="975" alt="Screenshot 2026-05-15 133207" src="https://github.com/user-attachments/assets/d62e7373-a1b9-4106-9428-e6945cbc8672" />
+<img width="1894" height="976" alt="Screenshot 2026-05-15 133253" src="https://github.com/user-attachments/assets/0668d6b0-25f9-4073-ac32-aa66a569c0e2" />
 
 ##  Prerequisites
 
